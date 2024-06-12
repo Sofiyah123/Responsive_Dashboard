@@ -588,6 +588,7 @@ body{
 @media (min-width: 640px){
   .navigation{
     left: -100%;
+    z-index: 1000;
     width: 100%;
   }
 }
@@ -604,14 +605,23 @@ body{
   }
 }
 
-.navigation.active{
-  width: 60px;
+@media (min-width: 640px){
+  .navigation.active{
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px){
+  .navigation.active{
+    width: 300px;
+  }
 }
 
 @media (min-width: 1024px){
   .navigation.active{
     left: 0px;
-    width: 300px;
+    width: 60px;
   }
 }
 
@@ -1149,7 +1159,7 @@ td .status.status.In-progress{
 
 .recentCustomers table tr td h4{
   font-weight: 16px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2rem;
 }
 

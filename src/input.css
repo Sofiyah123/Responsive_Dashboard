@@ -17,16 +17,16 @@ body{
 
 }
 .navigation{
-    @apply fixed sm:w-[100%]  sm:left-[-100%] md:w-[300px] h-[100%] bg-blue  border-blue transition-[0.5s] overflow-hidden lg:left-[-300px]
+    @apply fixed sm:w-[100%]  sm:left-[-100%] sm:z-[1000] md:w-[300px] h-[100%] bg-blue  border-blue transition-[0.5s] overflow-hidden lg:left-[-300px];
 }
 .navigation.active{
-    @apply w-[60px] lg:w-[300px] lg:left-0;
+    @apply  sm:w-[100%] sm:left-[0]  md:w-[300px] lg:w-[60px] lg:left-0;
 }
 .navigation ul{
     @apply absolute top-0 left-0 w-[100%];
 }
 .navigation ul li{
-    @apply relative w-[100%] list-none rounded-tl-[30px] rounded-bl-[30px]  ;
+    @apply relative w-[100%] list-none rounded-tl-[30px] rounded-bl-[30px];
 }
 .navigation ul li:hover, .navigation ul li.hovered{
     @apply bg-white;
@@ -60,8 +60,7 @@ body{
 
 /*----------------------- Main------------------------ */
 .main{
-    @apply absolute  w-[calc(100%-300px)] left-[300px] min-h-[100vh] 
-    bg-white transition duration-[0.5s] lg:w-[100%] lg:left-0;
+    @apply absolute  w-[calc(100%-300px)] left-[300px] min-h-[100vh] bg-white transition duration-[0.5s] lg:w-[100%] lg:left-0;
 }
 .main.active{
     @apply w-[calc(100%-60px)] left-[80px] lg:left-[300px];
@@ -77,7 +76,7 @@ body{
     @apply relative w-[400px] mx-[10px] my-[0px];
 }
 .search label{
-    @apply relative w-[100%]
+    @apply relative w-[100%];
 }
 .search label input{
     @apply w-[100%] h-[40px] rounded-[40px] py-[20px] px-[35px] text-[18px] outline-none border-[1px] border-solid border-black2;
@@ -201,10 +200,10 @@ body{
         @apply py-[12px] px-[10px];
     }
     .recentCustomers table tr td h4{
-        @apply font-[16px] leading-[1.2rem] font-[500];
+        @apply font-[16px] leading-[1.2rem] font-bold;
     }
     .recentCustomers table tr td h4 span{
-        @apply font-[14px] text-black2
+        @apply font-[14px] text-black2;
     }
     .recentCustomers table tr:hover{
         @apply bg-blue text-white;
